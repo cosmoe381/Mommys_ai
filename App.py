@@ -37,7 +37,7 @@ def webhook():
         # send back via Green API
         green_id = os.environ.get("GREEN_ID")
         green_token = os.environ.get("GREEN_TOKEN")
-        url = f"https://7107.api.greenapi.com/waInstance{green_id}/sendMessage/{green_token}"
+        url = f"https://api.green-api.com/waInstance{green_id}/sendMessage/{green_token}"
         requests.post(url, json={"chatId": chat_id, "message": answer})
 
     except Exception as e:
